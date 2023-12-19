@@ -56,4 +56,4 @@ void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {
   size = size / 2;
     gdImageArc(img, x, y, size, size, 0, 360, color);
     gdImageFillToBorder(img, x, y, color, color);
-}cd 
+}

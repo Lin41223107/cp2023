@@ -23,7 +23,7 @@ int main() {
     gdImagePtr img = gdImageCreateTrueColor(width, height);
     gdImageAlphaBlending(img, 0);
 
-    FILE *outputFile = fopen("./../images/hello.c", "wb");
+    FILE *outputFile = fopen("hellogd1.png", "wb");
     if (outputFile == NULL) {
         fprintf(stderr, "Error opening the output file.\n");
         return 1;

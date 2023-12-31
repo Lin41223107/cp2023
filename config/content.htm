@@ -820,8 +820,25 @@ int main() {
 }</pre>
 <p><img alt="" height="327" src="/images/9.png" width="627"/></p>
 <p></p><h2>10.</h2>
-<p></p>
-<h1>Note</h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+#define N 10
+
+int main() {
+  char chr;
+  printf("\n");
+
+  // Loop through ASCII values from 65 ('A') to 122 ('z')
+  for (chr = 50; chr &lt;= 100; chr = chr + 2) {
+    // Exclude characters between 'Z' and 'a'
+    if (chr &gt; 90 &amp;&amp; chr &lt; 97)
+      continue;
+
+    printf("[%2d-%c] ", chr, chr);
+  }
+
+  return 0;
+}</pre>
+<p></p><h1>Note</h1>
 <h2>SSh</h2>
 <p>下載putty</p>
 <p>在putty資料夾內開啟puttygen.exe做一把金鑰匙</p>

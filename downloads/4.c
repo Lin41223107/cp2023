@@ -3,9 +3,9 @@
 int main() 
 {
     // Declare and initialize character variables
-    char char1 = 'X';
-    char char2 = 'M';
-    char char3 = 'L';
+    char char1 = 'N';
+    char char2 = 'V';
+    char char3 = 'V';
 
     // Print the original and reversed characters
     printf("The reverse of %c%c%c is %c%c%c\n",

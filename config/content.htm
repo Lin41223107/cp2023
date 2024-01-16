@@ -425,7 +425,44 @@ void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotatio
 }</pre>
 <p><img alt="" height="267" src="/images/CHINA.png" width="400"/></p>
 <h3>烏克蘭</h3>
-<h2>w7</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+#include &lt;gd.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    int width = 600;  // 设置国旗宽度
+    int height = 300; // 设置国旗高度
+
+    gdImagePtr im;
+    FILE *pngout;
+
+    im = gdImageCreateTrueColor(width, height);
+
+    // 设置蓝色横条
+    int blue = gdImageColorAllocate(im, 0, 0, 255);
+    // 设置黄色横条
+    int yellow = gdImageColorAllocate(im, 255, 255, 0);
+
+    // 上半部分为蓝色横条
+    for (int i = 0; i &lt; height / 2; i++) {
+        gdImageFilledRectangle(im, 0, i, width - 1, i, blue);
+    }
+
+    // 下半部分为黄色横条
+    for (int i = height / 2; i &lt; height; i++) {
+        gdImageFilledRectangle(im, 0, i, width - 1, i, yellow);
+    }
+
+    pngout = fopen("ukraine_flag.png", "wb");
+    gdImagePng(im, pngout);
+    fclose(pngout);
+
+    gdImageDestroy(im);
+
+    return 0;
+}
+</pre>
+<p></p><h2>w7</h2>
 <p>EditA: edit all pages, 使用時機為(1)解決多人共用網站時的衝突, 或(2)刪除特定頁面</p>
 <p>Edit: edit one page, 先選頁面, 再選 Edit 然後才能進入編輯模式</p>
 <p>Config: 編輯網站標題, 若要編輯 site title, 必須更改 init.py 中的 site_title 字串內容</p>
